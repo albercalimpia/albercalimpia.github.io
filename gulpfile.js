@@ -83,27 +83,27 @@ exports.deleteDist = () => {
 
 exports.copy = () => {
   return gulp.src(files)
-    .pipe(gulp.dest('web-client/albercaLimpia'));
+    .pipe(gulp.dest(distFolder));
 };
 
 exports.copyImg = () => {
   return gulp.src(images)
-    .pipe(gulp.dest('web-client/albercaLimpia/img'));
+    .pipe(gulp.dest(distFolder + '/img'));
 };
 
 exports.copyJs = () => {
   return gulp.src(js)
-    .pipe(gulp.dest('web-client/albercaLimpia/js'));
+    .pipe(gulp.dest(distFolder + '/js'));
 };
 
 exports.copyCss = () => {
   return gulp.src(css)
-    .pipe(gulp.dest('web-client/albercaLimpia/css'));
+    .pipe(gulp.dest(distFolder + '/css'));
 };
 
 exports.copyAssets = () => {
   return gulp.src(assets)
-    .pipe(gulp.dest('web-client/albercaLimpia/assets'));
+    .pipe(gulp.dest(distFolder + '/assets'));
 };
 
 gulp.task('copy', function () {
